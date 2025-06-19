@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Kami - DEMA FIKES</title>
+    <link rel="stylesheet" href="tentangkami.css">
+</head>
+<body>
+<!-- Header -->
+    <header class="header">
+        <div class="header-top">
+            <img src="Logo_DEMA_FIKES.png" alt="Logo UIN" class="logodema">
+<!-- mencet logo ke home-->
+            <div class="header-title">
+                <div class="site-title">DEWAN EKSEKUTIF MAHASISWA</div>
+                <div class="site-subtitle">Fakultas Ilmu Kesehatan UIN Syarif Hidayatullah Jakarta</div>
+            </div>
+<!-- ...existing code... -->
+<div class="header-search-menu">
+    <input type="text" placeholder="Cari..." class="search-box">
+    <div class="menu-icon" id="menuIcon">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <nav class="popup-menu" id="popupMenu">
+        <ul>
+            <li><a href="beranda.html">Beranda</a></li>
+            <li><a href="profildema.html">Profil DEMA</a></li>
+            <li class="has-submenu">
+                <a href="kegiatandema.html" id="kegiatanMenu">Kegiatan DEMA</a>
+                <ul class="submenu" id="submenuKegiatan">
+                    <li><a href="#kegiatan1">BPH</a></li>
+                    <li><a href="#kegiatan7">PSDM</a></li>
+                    <li><a href="#kegiatan9">Kemahasiswaan</a></li>
+                    <li><a href="#kegiatan2">Keislaman</a></li>
+                    <li><a href="#kegiatan3">Kesor</a></li>
+                    <li><a href="#kegiatan4">Keilmuan</a></li>
+                    <li><a href="#kegiatan5">Kominfo</a></li>
+                    <li><a href="#kegiatan6">Sosmas</a></li>
+                    <li><a href="#kegiatan8">BKK</a></li>
+                    <li><a href="#kegiatan10">Kastrat</a></li>
+                </ul>
+            </li>
+            <li><a href="#kontak">Kontak</a></li>
+        </ul>
+<!--tinggal nambah list-->
+    </nav>
+</div>
+<!-- ...existing code... -->
+                    <span></span>
+                    <span></span>
+                    <span></span>
+        </div>
+        <div class="hero-section">
+            <h1>TENTANG KAMI</h1>
+            <p>Dewan Eksekutif Mahasiswa Fakultas Ilmu Kesehatan<br>UIN Syarif Hidayatullah Jakarta</p>
+        </div>
+        <div class="hero-section-two">
+            <h1>Kepengurusan Kabinet Citra Karsa</h1>
+        </div>
+        <aside class="sidebar">
+      <h3>Artikel terkait</h3>
+      <div class="related-article">
+        <img src="https://i.ibb.co/7p6Z2dV/related-img.jpg" alt="PBAK">
+        <div class="related-article-text">
+          <div class="related-article-title">PBAK</div>
+          <div class="related-article-desc">Bla bla bla</div>
+        </div>
+      </div>
+      <div class="related-article">
+        <img src="https://i.ibb.co/7p6Z2dV/related-img.jpg" alt="PBAK">
+        <div class="related-article-text">
+          <div class="related-article-title">PBAK</div>
+          <div class="related-article-desc">Bla bla bla</div>
+        </div>
+      </div>
+      <div class="related-article">
+        <img src="https://i.ibb.co/7p6Z2dV/related-img.jpg" alt="PBAK">
+        <div class="related-article-text">
+          <div class="related-article-title">PBAK</div>
+          <div class="related-article-desc">Bla bla bla</div>
+        </div>
+      </div>
+      <div class="related-article">
+        <img src="https://i.ibb.co/7p6Z2dV/related-img.jpg" alt="PBAK">
+        <div class="related-article-text">
+          <div class="related-article-title">PBAK</div>
+          <div class="related-article-desc">Bla bla bla</div>
+        </div>
+      </div>
+    </aside>
+    </header>
+<!-- Main Content -->
+    <main class="main-content">
+
+
+<!-- Footer -->
+    <footer class="footer">
+        <div class="footer-logo-title">
+            <img src="logo dema.png" alt="Logo UIN" class="footer-logo">
+            <div>Dewan Eksekutif Mahasiswa</div>
+        </div>
+        <div class="footer-contact">
+            <div class="footer-icons">
+                <div><img src="logo email.png" class="icon" alt="Email"> <span class="text-icon">dema.fikes.ormawa@apps.uin.jkt.ac.id</span></div>
+                <div><img src="logo instagram.png" class="iconinstagram" alt="Instagram"> <span class="text-icon">@demafikesuinjkt</span></div>
+                <div><img src="logo whatsapp.png" class="iconwhatsapp" alt="Whatsapp"> <span class="text-icon">DEMA FIKES UIN JKT</span></div>
+                <div><img src="logo tiktok.png" class="icontiktok" alt="Tiktok"> <span class="text-icon">@demafikesuinjkt</span></div>
+            </div>
+            <address>
+                Fakultas Ilmu Kesehatan<br>
+                Syarif Hidayatullah Jakarta<br>
+                Ciputat Timur 15412<br>
+                Indonesia
+            </address>
+        </div>
+    </footer>
+<!--Javascript-->
+    <script>
+document.getElementById('menuIcon').onclick = function() {
+    document.getElementById('popupMenu').classList.toggle('active');
+};
+// Tutup menu jika klik di luar menu
+document.addEventListener('click', function(e) {
+    const menu = document.getElementById('popupMenu');
+    const icon = document.getElementById('menuIcon');
+    if (!menu.contains(e.target) && !icon.contains(e.target)) {
+        menu.classList.remove('active');
+    }
+});
+</script>
+<script>
+document.getElementById('menuIcon').onclick = function() {
+    document.getElementById('popupMenu').classList.toggle('active');
+};
+// Tutup menu jika klik di luar menu
+document.addEventListener('click', function(e) {
+    const menu = document.getElementById('popupMenu');
+    const icon = document.getElementById('menuIcon');
+    const submenu = document.getElementById('submenuKegiatan');
+    const kegiatanMenu = document.getElementById('kegiatanMenu');
+    if (!menu.contains(e.target) && !icon.contains(e.target)) {
+        menu.classList.remove('active');
+        submenu.classList.remove('active');
+    }
+});
+// Toggle submenu saat "Kegiatan DEMA" diklik
+document.getElementById('kegiatanMenu').onclick = function(e) {
+    e.preventDefault();
+    document.getElementById('submenuKegiatan').classList.toggle('active');
+};
+</script>
+</body>
+</html>
+
