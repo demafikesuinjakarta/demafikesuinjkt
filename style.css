@@ -37,6 +37,18 @@
     flex-direction: column;
     align-items: flex-start;
   }
+
+      .popup-menu,
+  .popup-menu.active,
+  .popup-menu:hover {
+    right: 0;
+    left: auto;
+    top: 56px;           /* Atur sesuai tinggi header Anda */
+    min-width: 70vw;     /* Lebar menu popup, bisa diubah sesuai kebutuhan */
+    width: auto;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 4px 16px rgba(32,32,64,0.10);
+  }
 }
 
 * {
