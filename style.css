@@ -1,0 +1,510 @@
+@media (max-width: 600px) {
+  .header-top {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 8px 12px 8px;
+    gap: 12px;
+  }
+
+  .logodema {
+    width: 70px;
+    height: 70px;
+    padding: 8px;
+    margin-bottom: 8px;
+  }
+
+  .header-title {
+    margin-left: 0;
+    text-align: left;
+  }
+
+  .header-search-menu {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
+  .hero-section h1 {
+    font-size: 1.4rem;
+  }
+
+  .news-list {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .news-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background: #fff;
+    color: #202040;
+    line-height: 1.6;
+}
+
+/* Header */
+.header {
+    background: #f9f8ee;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 24px 0px 0px;
+}
+
+.logodema {
+    width: 100px;
+    height: 100px;
+    margin-right: 0;
+    margin-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    border: 2px solid #fff;
+    background: #fff;   /* Latar belakang putih */
+    padding: 15px; /* Jarak antara gambar dan kotak */
+    border-radius: 0;   /* Tidak bulat, jadi kotak */
+    box-shadow: 0 2px 8px rgba(32,32,64,0.06); /* Opsional: efek bayangan */
+}
+
+.logo {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    margin-right: 14px;
+    border: 2px solid #fff;
+    background: #fff;
+}
+
+.header-title {
+    flex: 1;
+    margin-left: 12px;
+}
+
+.site-title {
+    font-family: 'Hussar Bold', Arial, sans-serif;
+    color: #242659;
+    font-weight: bold;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+.site-subtitle {
+    font-family: 'Chau Philomene', Arial, sans-serif;
+    font-weight: normal;
+    font-size: 0.95rem;
+    color: #242659;
+}
+
+.header-search-menu {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+/* ...existing code... */
+.popup-menu,
+.popup-menu:hover {
+    display: none;
+    position: absolute;
+    top: 60px; /* atur sesuai kebutuhan */
+    right: 24px;
+    background: #242659;
+    border: 1px solid #242659;
+    box-shadow: 0 4px 16px rgba(32,32,64,0.10);
+    z-index: 100;
+    border-radius: 8px;
+    min-width: 160px;
+}
+
+.popup-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.popup-menu li {
+    border-bottom: 1px solid #242659;
+}
+.popup-menu li:hover {
+    background: #1a1a40;
+    border-radius: 8px;
+}
+.popup-menu li:last-child {
+    border-bottom: none;
+}
+.popup-menu a {
+    display: block;
+    padding: 12px 20px;
+    color: #fff;
+    text-decoration: none;
+}
+.popup-menu a:hover {
+    background: #242659;
+}
+/* Tampilkan menu jika aktif */
+
+.popup-menu.active {
+    display: block;
+}
+/* ...existing code... */
+
+.search-box {
+    padding: 6px 12px;
+    border: 1px solid #242659;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.menu-icon {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.menu-icon span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background: #242659;
+    border-radius: 2px;
+}
+
+/* Sembunyikan submenu secara default */
+.submenu {
+    display: none;
+    position: absolute;
+    left: -40px;
+    top: 100%;
+    background: #fdfce8;
+    border-radius: 4px 4px 4px 4px;
+    min-width: 160px;
+    z-index: 200;
+    box-shadow: 0 4px 16px rgba(32,32,64,0.10);
+    padding: 0;
+    margin: 0;
+    transform: scale(1.08);   /* Sedikit membesar */
+}
+.has-submenu {
+    position: relative;
+}
+.submenu li a {
+    color: #242659;
+    padding: 12px 20px;
+    display: block;
+    text-decoration: none;
+}
+.submenu li a:hover {
+    background: #1a1a40;
+    color:#fdfce8
+}
+/* Tampilkan submenu jika aktif */
+.submenu.active {
+    display: block;
+}
+
+/* Hero Section */
+.hero-section {
+    background: url('background\ atas.png') center/cover no-repeat;
+    color: #fdfce8;
+    padding: 50px 24px 50px 24px;
+    text-align: left;
+    position: relative;
+}
+
+.hero-section h1 {
+    font-family: 'Hussar Bold', Arial, sans-serif;
+    font-size: 2.4rem;
+    font-weight: bold;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+    line-height: 1.1;
+}
+
+.hero-section p {
+    font-family: 'Chau Philomene', Arial, sans-serif;
+    font-size: 1.1rem;
+    margin-bottom: 22px;
+    max-width: 600px;
+    color: #fff;
+}
+
+.btn-primary {
+    background: #fff;
+    color: #202040;
+    padding: 12px 32px;
+    border-radius: 12px;
+    font-family: 'Hussar Bold', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(32,32,64,0.08);
+    transition: background 0.2s;
+}
+
+.btn-primary:hover {
+    background: #f3e9e0;
+}
+
+/* News Section */
+.news-section {
+    padding: 36px 18px 18px 18px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.news-section h2 {
+    font-size: 1.7rem;
+    font-weight: bold;
+    margin-bottom: 18px;
+    font-family: 'Hussar Bold', Arial, sans-serif;
+}
+
+.news-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.news-item {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(32,32,64,0.06);
+    padding: 12px 18px;
+    gap: 18px;
+}
+
+.news-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.news-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.news-info h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: 'Hussar Bold', Arial, sans-serif;
+    color: #242659;
+}
+
+.news-info p {
+    font-family: 'Chau Philomene', Arial, sans-serif;
+    font-size: 0.95rem;
+    color: #242659;
+}
+
+.btn-secondary {
+    font-family: 'Hussar Bold', Arial, sans-serif;
+    align-self: flex-start;
+    margin-top: 6px;
+    background: #202040;
+    color: #fff;
+    padding: 8px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-secondary:hover {
+    background: #32326a;
+}
+
+/* Footer */
+.footer {
+    background: #23235a;
+    color: #fff;
+    padding: 32px 18px 24px 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+}
+
+.footer-logo-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: Chau Philomene, Arial, sans-serif;
+    color: #fff;
+}
+
+.footer-logo {
+    width: 50px;
+    height: 50px;
+}
+
+.icon {
+    width: 24px;
+    height: 18px;
+}
+
+.iconinstagram {
+    width: 24px;
+    height: 24px;
+}
+
+.iconwhatsapp {
+    width: 24px;
+    height: 24px;
+}
+
+.icontiktok {
+    width: 24px;
+    height: 24px;
+}
+
+.text-icon {
+    display: flex;
+    font-size: 0.9rem;
+    font-family: 'Chau Philomene', Arial, sans-serif;
+    color: #fff
+}
+
+.footer-contact {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    gap: 10px;
+    font-size: 1rem;
+}
+
+.footer address {
+    font-family: 'Chau Philomene', Arial, sans-serif;
+    font-style: normal;
+    color: #e0e0e0;
+    font-size: 0.98rem;
+    text-align: right;      /* Rata kanan */
+    align-self: flex-start; /* Tetap di atas */
+    margin-left: auto;      /* Menempel ke kanan */
+}
+
+.footer-icons > div {
+    display: flex;
+    align-items: column;      /* Icon dan teks sejajar */
+    gap: 8px;                 /* Jarak icon dan teks */
+}
+
+.adress {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 0.9rem;
+}
+
+.icon {
+    vertical-align: middle;
+}
+
+.footer-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 1.3rem;
+}
+
+.footer address {
+    font-style: normal;
+    color: #fff;
+    font-size: 0.98rem;
+}
+
+/* Responsive */
+
+@font-face {
+    font-family: 'Hussar Bold';
+    src: url('HussarBold.otf') format('opentype');
+    /* Jika file .ttf, gunakan format('truetype') */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family:'Chau Philomene';
+    src: url('ChauPhilomeneOne-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@media (max-width: 800px) {
+    .header-top, .footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+    .news-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    .news-item img {
+        width: 100%;
+        height: 120px;
+    }
+}
+
+@media (max-width: 500px) {
+    .hero-section h1 {
+        font-size: 1.4rem;
+    }
+    .news-section h2 {
+        font-size: 1.1rem;
+    }
+    .btn-primary, .btn-secondary {
+        font-size: 0.95rem;
+        padding: 10px 18px;
+    }
+}
+
+@media (max-width: 600px) {
+    /* CSS di sini hanya berlaku jika lebar layar 600px atau kurang */
+    .footer-contact {
+        flex-direction: column;   /* Susun vertikal di mobile */
+        gap: 18px;
+        align-items: flex-start;
+    }
+    .footer-logo-title {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    .footer {
+        padding: 24px 8px 18px 8px;
+    }
+    .footer-logo {
+        width: 50px;
+        height: 50px;
+    }
+}
