@@ -4,7 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DEMA FIKES UIN Syarif Hidayatullah Jakarta</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css">\
+    <script src="https://www.gstatic.com/firebasejs/9.24.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.24.0/firebase-database-compat.js"></script>
+<script>
+  // Ganti dengan konfigurasi dari Firebase Console milik Anda
+  const firebaseConfig = {
+    apiKey: "API_KEY",
+    authDomain: "PROJECT_ID.firebaseapp.com",
+    databaseURL: "https://PROJECT_ID.firebaseio.com",
+    projectId: "PROJECT_ID",
+    storageBucket: "PROJECT_ID.appspot.com",
+    messagingSenderId: "SENDER_ID",
+    appId: "APP_ID"
+  };
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.database();
+</script>
 </head>
 <body>
 <!-- Header -->
@@ -160,4 +176,5 @@ document.getElementById('kegiatanMenu').onclick = function(e) {
 };
 </script>
 </body>
+
 </html>
