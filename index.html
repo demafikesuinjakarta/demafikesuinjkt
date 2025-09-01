@@ -115,6 +115,8 @@
                     </div>
                 </article>
             </div>
+            <button id="likeBtn">&#10084; Suka</button>
+            <span id="likeCount">0</span> suka
         </section>
     </main>
 
@@ -175,7 +177,26 @@ document.getElementById('kegiatanMenu').onclick = function(e) {
     document.getElementById('submenuKegiatan').classList.toggle('active');
 };
 </script>
+    <script>
+  const likeBtn = document.getElementById('likeBtn');
+  const likeCount = document.getElementById('likeCount');
+  const likeRef = firebase.database().ref('likes/total');
+
+  // Update UI jika nilai di Firebase berubah
+  likeRef.on('value', (snapshot) => {
+    likeCount.textContent = snapshot.val() || 0;
+  });
+
+  likeBtn.addEventListener('click', () => {
+    // Transaksi atomik untuk menambah jumlah suka
+    likeRef.transaction((currentLikes) => {
+      return (currentLikes || 0) + 1;
+    });
+  });
+</script>
+
 </body>
 
 </html>
+
 
